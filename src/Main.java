@@ -11,7 +11,7 @@ public class Main {
 
         ArrayList<PessoaFisica> listaPf = new ArrayList<>();
 
-
+        PessoaFisica metodoPf = new PessoaFisica();
         System.out.println("Bem - Vindo");
         Scanner leitor = new Scanner(System.in);
         String opcao;
@@ -90,6 +90,7 @@ public class Main {
                             System.out.println("Nome: " + cadapf.nome);
                             System.out.println("CPF: " + cadapf.cpf);
                             System.out.println("Data de Nascimento: " + cadapf.dtNasc.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));
+                            System.out.println("Imposto a Pagar" + metodoPf .CalcularImposto(cadapf.rendimento));
                             System.out.println("Endereco: "+ cadapf.endereco.logradouro + "-" + cadapf.endereco.numero);
                             System.out.println();
                             System.out.println("Aperte Enter para continuar");
