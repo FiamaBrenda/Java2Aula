@@ -7,15 +7,15 @@ public class PessoaJuridica extends Pessoa {
         acima de 6k - 5%
          */
 
-        if (rendimento <= 1500) {
-            return 0;
-        } else if (rendimento <= 3500) {
-            return rendimento * .02f;
-
-        } else if (rendimento <= 3500) {
-            return rendimento * .035f;
-        } else {
+        if (rendimento <= 3000) {
+            return rendimento * .03f;
+        } else if (rendimento <= 6000) {
             return rendimento * .05f;
+
+        } else if (rendimento <= 10000) {
+            return rendimento * .07f;
+        } else {
+            return rendimento * .09f;
         }
 
     }
